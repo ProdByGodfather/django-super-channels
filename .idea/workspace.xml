@@ -4,32 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/django_channels.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/routing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_channels/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_channels/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_channels/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_channels/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_channels/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/chat/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Fix Errors and create websocket connection">
+      <change beforePath="$PROJECT_DIR$/django_channels/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_channels/asgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,11 +91,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702928177530</updated>
-      <workItem from="1702928177535" duration="798000" />
+      <workItem from="1702928177535" duration="948000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
+      <option name="closed" value="true" />
+      <created>1702929091460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702929091461</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix Errors and create websocket connection">
+      <option name="closed" value="true" />
+      <created>1702929098611</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702929098611</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix Errors and create websocket connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Errors and create websocket connection" />
   </component>
 </project>
