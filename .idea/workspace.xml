@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Config Redis on project">
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Change Consumers for group chat">
+      <change afterPath="$PROJECT_DIR$/static/js/reconnecting-websocket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/clinet.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/clinet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/Projects/django_channels/static/js",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,6 +61,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\django_channels\static\js" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="django_channels" type="Python.DjangoServer" factoryName="Django server">
       <module name="django_channels" />
@@ -104,7 +112,8 @@
       <workItem from="1702978795371" duration="403000" />
       <workItem from="1702981370501" duration="533000" />
       <workItem from="1702981939954" duration="727000" />
-      <workItem from="1703008223115" duration="2547000" />
+      <workItem from="1703008223115" duration="3502000" />
+      <workItem from="1703014297877" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
@@ -146,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703009377930</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Change Consumers for group chat">
+      <option name="closed" value="true" />
+      <created>1703010869537</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703010869537</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +173,7 @@
     <MESSAGE value="Fix Errors and create websocket connection" />
     <MESSAGE value="Create `requirements.txt`" />
     <MESSAGE value="Config Redis on project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config Redis on project" />
+    <MESSAGE value="Change Consumers for group chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Consumers for group chat" />
   </component>
 </project>
