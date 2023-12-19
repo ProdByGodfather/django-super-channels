@@ -8,6 +8,12 @@ from rest_framework.renderers import JSONRenderer
 class ChatConsumer(WebsocketConsumer):
 
     def new_message(self, data):
+        '''
+            we get message from client.
+            we get request.user and time to send message
+            then create new message on db
+            before create new message we send data from websocket to client again
+        '''
         print("New Message received")
     def fetch_message(self, data):
         qs = Message.last_messages(self)
@@ -15,6 +21,9 @@ class ChatConsumer(WebsocketConsumer):
         content = {
             "message": eval(message_json)
         }
+        '''
+            we get datas from db and show to users
+        '''
         self.chat_message(content)
 
     def message_serializer(self, qs):
@@ -53,6 +62,11 @@ class ChatConsumer(WebsocketConsumer):
         message = text_data_json.get("message",None)
         command = text_data_json["command"]
 
+        '''
+            we get command from client
+            if command was "new_message" run funtion new_message
+            if command was "fetch_message" run function fetch_message 
+        '''
         self.commands[command](self,message)
 
     def send_to_chat_message(self, message):
