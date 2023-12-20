@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Create &amp; Config README.md file" />
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="edit README.md file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +27,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ProdByGodfather"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8e92bc4c-573b-4aa0-b397-eeb5add79b4d" />
+        <option name="url" value="https://github.com/ProdByGodfather/django-channels.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,6 +81,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\django_channels\static\images" />
       <recent name="E:\Projects\django_channels\static\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\django_channels\static\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,7 +135,7 @@
       <workItem from="1703008223115" duration="3502000" />
       <workItem from="1703014297877" duration="2466000" />
       <workItem from="1703017223941" duration="4542000" />
-      <workItem from="1703052750937" duration="2422000" />
+      <workItem from="1703052750937" duration="3153000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
@@ -205,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703055045508</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="edit README.md file">
+      <option name="closed" value="true" />
+      <created>1703055391003</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703055391003</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +250,7 @@
     <MESSAGE value="fetch messages from `DB` and get from client" />
     <MESSAGE value="write comments for readers" />
     <MESSAGE value="Create &amp; Config README.md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create &amp; Config README.md file" />
+    <MESSAGE value="edit README.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit README.md file" />
   </component>
 </project>

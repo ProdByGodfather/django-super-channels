@@ -6,7 +6,7 @@ Chat room web application based on `django_channels` and implemented with websoc
 [![redis](https://img.shields.io/badge/redis-%2320232a.svg?style=for-the-badge&logo=redis)](#django-channels)
 [![Sqlite](https://img.shields.io/badge/sqlite-%2320232a.svg?style=for-the-badge&logo=sqlite)](#django-channels)
 [![djangorestframework](https://img.shields.io/badge/Django_Rest_Framework-%2320232a.svg?style=for-the-badge&logo=fastapi)](#django-channels)
-[![js](https://img.shields.io/badge/jsava_script-%2320232a.svg?style=for-the-badge&logo=javascript)](#django-channels)
+[![js](https://img.shields.io/badge/java_script-%2320232a.svg?style=for-the-badge&logo=javascript)](#django-channels)
 
 Channels support Django's native asynchronous view and allow Django projects to handle not only HTTP, but also protocols that require long-running connections - `WebSockets`, `MQTT`, `chatbots`, `amateur radio`, `etc`.
 Now the django_channels architecture allows us to use websockets.
@@ -20,12 +20,12 @@ Protocols that provide the possibility of sending requests from both the server 
 
 ## Performance
 > [!NOTE]
-> It is better to use the `virtualenvironment` when installing libraries and running the project. 
+> It is better to use the **virtualenvironment** when installing libraries and running the project. 
 
 > [!WARNING]
-> Have redis installed on the system before running
+> Have **redis** installed on the system before running
 
-**To install prerequisite libraries:**
+**To install required libraries:**
 ```
 pip install -r requirements.txt
 ```
