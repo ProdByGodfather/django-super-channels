@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="write comments for readers">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/websocket.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Create &amp; Config README.md file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +115,7 @@
       <workItem from="1703008223115" duration="3502000" />
       <workItem from="1703014297877" duration="2466000" />
       <workItem from="1703017223941" duration="4542000" />
-      <workItem from="1703052750937" duration="2061000" />
+      <workItem from="1703052750937" duration="2422000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
@@ -201,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703021889257</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Create &amp; Config README.md file">
+      <option name="closed" value="true" />
+      <created>1703055045508</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703055045508</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +221,7 @@
     <MESSAGE value="Optimizing `reconnecting-websocket.js` file" />
     <MESSAGE value="fetch messages from `DB` and get from client" />
     <MESSAGE value="write comments for readers" />
-    <option name="LAST_COMMIT_MESSAGE" value="write comments for readers" />
+    <MESSAGE value="Create &amp; Config README.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create &amp; Config README.md file" />
   </component>
 </project>

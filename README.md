@@ -12,15 +12,15 @@ Channels support Django's native asynchronous view and allow Django projects to 
 Now the django_channels architecture allows us to use websockets.
 Protocols that provide the possibility of sending requests from both the server and the client side.
 
-<center><img src="static/images/websocket.png" width="70%"></center>
+<center><img src="static/images/websocket.webp" width="70%"></center>
 
-django channels is designed in the form of a messenger application whose client is javascript and its back-end has created a websocket-based connection with django.
+`django channels` is designed in the form of a messenger application whose client is javascript and its back-end has created a websocket-based connection with django.
 
 <hr>
 
 ## Performance
 > [!NOTE]
-> It is better to use the virtual environment when installing libraries and running the project. 
+> It is better to use the `virtualenvironment` when installing libraries and running the project. 
 
 > [!WARNING]
 > Have redis installed on the system before running
