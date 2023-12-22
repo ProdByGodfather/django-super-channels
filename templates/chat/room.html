@@ -13,7 +13,7 @@
     <script src="{% static 'js/reconnecting-websocket.js' %}"></script>
     <script>
     const roomName = JSON.parse(document.getElementById('room-name').textContent);
-
+    var username = {{ username }}
         const chatSocket = new ReconnectingWebSocket(
             'ws://'
             + window.location.host
@@ -30,10 +30,17 @@
 
         chatSocket.onmessage = function(e) {
             const data = JSON.parse(e.data);
+            console.log(data)
 
-            for(let i=data['message'].length-1;i>=0;i--){
-                document.querySelector('#chat-log').value += (data['message'][i]['content'] + '\n');
+            if (data['command'] == "fetch_message") {
+                for (let i = data['message'].length - 1; i >= 0; i--) {
+                    document.querySelector('#chat-log').value += (data['message'][i]['content'] + '\n');
+                }
+
+            }else{
+                document.querySelector('#chat-log').value += (data['message'] + '\n');
             }
+
         };
 
         chatSocket.onclose = function(e) {
@@ -52,7 +59,8 @@
             const message = messageInputDom.value;
             chatSocket.send(JSON.stringify({
                 'message': message,
-                'command': "new_message"
+                'command': "new_message",
+                'username': username
             }));
             messageInputDom.value = '';
         };
