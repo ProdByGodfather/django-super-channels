@@ -20,8 +20,7 @@ class ChatConsumer(WebsocketConsumer):
         author = data['username']
         user_model = user.objects.filter(username=author).first()
         message_model = Message.objects.create(author=user_model, content=message)
-        result = self.message_serializer(message_model)
-        result = eval(result)['content']
+        result = eval(self.message_serializer(message_model))
         self.send_to_chat_message(result)
 
     def fetch_message(self, data):
@@ -82,8 +81,9 @@ class ChatConsumer(WebsocketConsumer):
         # Send message to room group
         async_to_sync(self.channel_layer.group_send)(self.room_group_name,
             {
+                '__str__':message['__str__'],
                 "type": "chat.message",
-                "message": message,
+                "content": message['content'],
                 'command':"new_message"
             })
 

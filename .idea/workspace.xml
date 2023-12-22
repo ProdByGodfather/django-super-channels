@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="edit README.md file" />
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="edit README.md file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -137,7 +141,7 @@
       <workItem from="1703105691286" duration="64000" />
       <workItem from="1703239680023" duration="1451000" />
       <workItem from="1703244420852" duration="2819000" />
-      <workItem from="1703247972553" duration="325000" />
+      <workItem from="1703247972553" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
@@ -235,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703055391003</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="edit README.md file">
+      <option name="closed" value="true" />
+      <created>1703248318826</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703248318826</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
