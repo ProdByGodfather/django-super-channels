@@ -12,7 +12,7 @@ Channels support Django's native asynchronous view and allow Django projects to 
 Now the django_channels architecture allows us to use websockets.
 Protocols that provide the possibility of sending requests from both the server and the client side.
 
-<center><img src="static/img/readme.png" width="90%"></center>
+<center><img src="static/img/readme.png" width="100%"></center>
 
 According to the picture, when a message is sent from the `mahdi` user, the message is sent to the server through websocket.
 The server saves the message once in the database and sends the same message again to the mahdi user and other users without the need for a request.
