@@ -1,14 +1,50 @@
+{% extends 'chat/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Chat Room {{ room_name }}</title>
-</head>
-<body>
-    <textarea id="chat-log" cols="100" rows="20" disabled></textarea><br>
-    <input id="chat-message-input" type="text"  size="100"><br>
-    <input id="chat-message-submit" type="button" value="Send">
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+<div id="header-right" class="header-right">
+        <!-- profile pict -->
+        <div id="header-img" class="profile header-img">
+          <img src="{% static 'images/Sample_User_Icon.png' %}" alt="">
+        </div>
+
+        <!-- name -->
+        <h4 class="name friend-name">{{ username }}</h4>
+
+        <!-- some btn -->
+        <div class="some-btn">
+          <span class="glyphicon glyphicon-facetime-video"></span>
+          <span class="glyphicon glyphicon-earphone"></span>
+          <span class="glyphicon glyphicon-option-vertical option-btn"></span>
+        </div>
+      </div>
+
+      <!-- chat area -->
+      <div id="chat-area" class="chat-area">
+        <!-- chat content -->
+
+</div>
+
+
+
+
+      <!-- typing area -->
+      <div id="typing-area" class="typing-area">
+        <!-- input form -->
+        <input id="chat-message-input" class="type-area" placeholder="Type something...">
+        <!-- attachment btn -->
+        <div class="attach-btn">
+          <span class="glyphicon glyphicon-paperclip file-btn"></span>
+        </div>
+        <!-- send btn -->
+        <button id="chat-message-submit" class="glyphicon glyphicon-send send-btn"></button>
+      </div>
+
+
     {{ room_name|json_script:"room-name" }}
     <script src="{% static 'js/reconnecting-websocket.js' %}"></script>
     <script>
@@ -34,11 +70,11 @@
 
             if (data['command'] == "fetch_message") {
                 for (let i = data['message'].length - 1; i >= 0; i--) {
-                    document.querySelector('#chat-log').value += (data['message'][i]['content'] + '\n');
+                    create_message(data['message'][i]);
                 }
 
             }else{
-                document.querySelector('#chat-log').value += (data['content'] + '\n');
+                create_message(data)
             }
 
         };
@@ -64,7 +100,33 @@
             }));
             messageInputDom.value = '';
         };
+        function create_message(data){
+            var author = data["__str__"]
+            if(author != username){
+                var div1 = document.createElement('div');
+                div1.id = 'friends-chat';
+                div1.className = 'friends-chat';
+                var div2 = div1.appendChild(document.createElement('div'));
+                div2.className = 'profile friends-chat-photo';
+                var img = div2.appendChild(document.createElement('img'))
+                img.src = "{% static 'images/Sample_User_Icon.png' %}";
+                var div_chat = div1.appendChild(document.createElement('div'));
+                div_chat.className = 'friends-chat-content';
+                p1 = div_chat.appendChild(document.createElement('p'))
+                p1.className = 'friends-chat-balloon';
+                p1.textContent = data.content;
+                document.querySelector("#chat-area").appendChild(div1)
+            } else{
+                var div_me = document.createElement('div');
+                div_me.className = 'your-chat';
+                div_me.id = 'your-chat';
+                var pme = div_me.appendChild(document.createElement('p'));
+                pme.className = 'your-chat-balloon';
+                pme.textContent = data.content;
+                document.querySelector("#chat-area").appendChild(div_me)
+            }
+
+        }
 </script>
 
-</body>
-</html>
+{% endblock %}
