@@ -9,7 +9,7 @@ class ChatAdmin(admin.ModelAdmin):
 
 
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ('author','timestamp')
+    list_display = ('author','timestamp','related_chat')
     list_filter = ('timestamp',)
     search_fields = ('author',)
     date_hierarchy = 'timestamp'

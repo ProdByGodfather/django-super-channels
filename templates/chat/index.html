@@ -36,6 +36,12 @@
             <button id="room-name-submit" class="btn_search_control"><span class="glyphicon glyphicon-search spanner"></span></button>
 
         </div>
+        <br>
+        <h1>Chat Rooms</h1>
+        {% for i in chat_rooms %}
+            <a href="/chat/{{ i.roomname }}/" class="btn btn-info">{{ i.roomname }}</a>
+        {% endfor %}
+
     </center>
 </div>
 

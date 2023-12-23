@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Change time of message for chatroom">
-      <change afterPath="$PROJECT_DIR$/chat/migrations/0002_chat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/chat/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/migrations/0003_message_related_chat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/contextprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/contextprocessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_channels/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_channels/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +154,7 @@
       <workItem from="1703323084689" duration="158000" />
       <workItem from="1703324979252" duration="1233000" />
       <workItem from="1703351718071" duration="4036000" />
+      <workItem from="1703359353679" duration="3622000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
