@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="fix bugs and errors" />
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="edit README.md">
+      <change afterPath="$PROJECT_DIR$/chat/contextprocessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_channels/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_channels/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -139,7 +149,10 @@
       <workItem from="1703244420852" duration="2819000" />
       <workItem from="1703247972553" duration="1839000" />
       <workItem from="1703254399022" duration="4121000" />
-      <workItem from="1703260318102" duration="442000" />
+      <workItem from="1703260318102" duration="686000" />
+      <workItem from="1703271204860" duration="4832000" />
+      <workItem from="1703323084689" duration="158000" />
+      <workItem from="1703324979252" duration="472000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
@@ -261,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703260732353</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="edit README.md">
+      <option name="closed" value="true" />
+      <created>1703260784952</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703260784952</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +302,7 @@
     <MESSAGE value="edit README.md file" />
     <MESSAGE value="edit consumers for good performance" />
     <MESSAGE value="fix bugs and errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs and errors" />
+    <MESSAGE value="edit README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit README.md" />
   </component>
 </project>

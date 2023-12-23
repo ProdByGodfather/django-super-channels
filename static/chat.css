@@ -372,4 +372,26 @@ input::placeholder {
     src:  url('bootstrap3.3/fonts/IRANSans.ttf') format('ttf');
   }
   
-  
+#chat-message-submit{
+    background:none;
+    border: none;
+}#chat-message-submit:hover{
+    background:none;
+    border: none;
+}
+
+ .btn_search_control{
+     border: none;
+     padding: 15px 17px;
+     border-radius: 10px;
+ }
+ .input_search_control{
+     padding: 7px;
+     font-size: 15px;
+     width: 60%;
+     border:none;
+     border-radius: 5px;
+ }
+ .spanner{
+     font-size: 16px;
+ }

@@ -1,14 +1,44 @@
+{% extends 'chat/base.html' %}
+{% load static %}
+{% block title %}
+	Chat Rooms | New Chat
+{% endblock %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Chat Rooms</title>
-</head>
-<body>
-    What chat room would you like to enter?<br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+{% block content %}
+    <div id="header-right" class="header-right">
+        <!-- profile pict -->
+        <div id="header-img" class="profile header-img">
+          <img src="{% static 'images/Sample_User_Icon.png' %}" alt="">
+        </div>
+
+        <!-- name -->
+        <h4 class="name friend-name">{% if user.is_authenticated %}
+        	{{ just_username }}
+            {% else %}
+            <span style="color: red">Ghost User</span>
+            {% endif %}</h4>
+
+        <!-- some btn -->
+        <div class="some-btn">
+          <span class="glyphicon glyphicon-facetime-video"></span>
+          <span class="glyphicon glyphicon-earphone"></span>
+          <span class="glyphicon glyphicon-option-vertical option-btn"></span>
+        </div>
+      </div>
+
+      <!-- chat area -->
+      <div id="chat-area" class="chat-area">
+        <!-- chat content -->
+    <center>
+        <div class="div_marg">
+             <h3>What chat room would you like to enter?</h3><br>
+    <input id="room-name-input" class="input_search_control" type="text" size="100"><br><br>
+            <button id="room-name-submit" class="btn_search_control"><span class="glyphicon glyphicon-search spanner"></span></button>
+
+        </div>
+    </center>
+</div>
+
 
     <script>
         document.querySelector('#room-name-input').focus();
@@ -23,5 +53,5 @@
             window.location.pathname = '/chat/' + roomName + '/';
         };
     </script>
-</body>
-</html>
+
+{% endblock %}

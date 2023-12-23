@@ -82,6 +82,7 @@ class ChatConsumer(WebsocketConsumer):
         async_to_sync(self.channel_layer.group_send)(self.room_group_name,
             {
                 '__str__':message['__str__'],
+                'timestamp':message['timestamp'],
                 "type": "chat.message",
                 "content": message['content'],
                 'command':"new_message"

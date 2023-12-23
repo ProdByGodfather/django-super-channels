@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-
+    room {{ room_name }}
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,13 @@
         </div>
 
         <!-- name -->
-        <h4 class="name friend-name">{{ username }}</h4>
+        <h4 class="name friend-name">
+            {% if user.is_authenticated %}
+        	{{ just_username }}
+            {% else %}
+            <span style="color: red">Ghost User</span>
+            {% endif %}
+        </h4>
 
         <!-- some btn -->
         <div class="some-btn">
@@ -31,8 +37,8 @@
 
 
 
-
-      <!-- typing area -->
+        {% if user.is_authenticated %}
+	<!-- typing area -->
       <div id="typing-area" class="typing-area">
         <!-- input form -->
         <input id="chat-message-input" class="type-area" placeholder="Type something...">
@@ -41,8 +47,13 @@
           <span class="glyphicon glyphicon-paperclip file-btn"></span>
         </div>
         <!-- send btn -->
-        <button id="chat-message-submit" class="glyphicon glyphicon-send send-btn"></button>
+        <button id="chat-message-submit"><span class="glyphicon glyphicon-send send-btn"></span></button>
       </div>
+            {% else %}
+            <div id="typing-area" class="typing-area">
+            <input  class="type-area" value="You Cant Type message...  Please Login" disabled>
+        {% endif %}
+
 
 
     {{ room_name|json_script:"room-name" }}
@@ -93,12 +104,14 @@
         document.querySelector('#chat-message-submit').onclick = function(e) {
             const messageInputDom = document.querySelector('#chat-message-input');
             const message = messageInputDom.value;
-            chatSocket.send(JSON.stringify({
-                'message': message,
-                'command': "new_message",
-                'username': username
-            }));
-            messageInputDom.value = '';
+            if (messageInputDom.value != ""){
+                chatSocket.send(JSON.stringify({
+                    'message': message,
+                    'command': "new_message",
+                    'username': username
+                }));
+                messageInputDom.value = '';
+            }
         };
         function create_message(data){
             var author = data["__str__"]
@@ -112,9 +125,15 @@
                 img.src = "{% static 'images/Sample_User_Icon.png' %}";
                 var div_chat = div1.appendChild(document.createElement('div'));
                 div_chat.className = 'friends-chat-content';
-                p1 = div_chat.appendChild(document.createElement('p'))
+                var p0 = div_chat.appendChild(document.createElement('p'))
+                p0.className = 'friends-chat-name';
+                p0.textContent = data.__str__;
+                var p1 = div_chat.appendChild(document.createElement('p'))
                 p1.className = 'friends-chat-balloon';
                 p1.textContent = data.content;
+                var h5 = div_chat.appendChild(document.createElement("h5"))
+                h5.className = 'chat-datetime';
+                h5.textContent = data.timestamp;
                 document.querySelector("#chat-area").appendChild(div1)
             } else{
                 var div_me = document.createElement('div');
@@ -123,6 +142,9 @@
                 var pme = div_me.appendChild(document.createElement('p'));
                 pme.className = 'your-chat-balloon';
                 pme.textContent = data.content;
+                var ptime = div_me.appendChild(document.createElement("h5"))
+                ptime.className = 'chat-datetime';
+                ptime.textContent = data.timestamp;
                 document.querySelector("#chat-area").appendChild(div_me)
             }
 
