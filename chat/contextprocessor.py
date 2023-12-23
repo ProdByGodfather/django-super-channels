@@ -4,6 +4,13 @@ import json
 
 def return_username(request):
     username = request.user.username
+    """
+    this function will return 2 atgs
+    username returned 'user.username'
+    just_username returned user.username
+    difference between username and just_username are semicolon
+    username for json and just_username for view and if
+    """
     context = {
         'username': mark_safe(json.dumps(username)),
         'just_username': username,

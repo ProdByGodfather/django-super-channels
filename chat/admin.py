@@ -1,7 +1,19 @@
 from django.contrib import admin
 from chat import models
 
-# Register your models here.
+class ChatAdmin(admin.ModelAdmin):
+    list_display = ('roomname','createtime')
+    search_fields = ("roomname",)
+    list_filter = ('createtime',)
+    date_hierarchy = 'createtime'
 
 
-admin.site.register(models.Message)
+class RoomAdmin(admin.ModelAdmin):
+    list_display = ('author','timestamp')
+    list_filter = ('timestamp',)
+    search_fields = ('author',)
+    date_hierarchy = 'timestamp'
+
+# Register The models here.
+admin.site.register(models.Chat,ChatAdmin)
+admin.site.register(models.Message,RoomAdmin)
