@@ -133,7 +133,9 @@
                 p1.textContent = data.content;
                 var h5 = div_chat.appendChild(document.createElement("h5"))
                 h5.className = 'chat-datetime';
-                h5.textContent = data.timestamp;
+                let str = data.timestamp.toString();
+                str = str.substring(0, str.length - 8);
+                h5.textContent = str;
                 document.querySelector("#chat-area").appendChild(div1)
             } else{
                 var div_me = document.createElement('div');
@@ -141,10 +143,12 @@
                 div_me.id = 'your-chat';
                 var pme = div_me.appendChild(document.createElement('p'));
                 pme.className = 'your-chat-balloon';
+                let strt = data.timestamp.toString();
+                strt = strt.substring(0, strt.length - 8);
                 pme.textContent = data.content;
                 var ptime = div_me.appendChild(document.createElement("h5"))
                 ptime.className = 'chat-datetime';
-                ptime.textContent = data.timestamp;
+                ptime.textContent = strt;
                 document.querySelector("#chat-area").appendChild(div_me)
             }
 
