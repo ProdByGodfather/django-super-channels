@@ -32,6 +32,7 @@ All messages are received in the form of json through the client, and the main p
 
 > [!WARNING]
 > Have **redis** installed on the system before running
+> download and install [redis for windows](https://github.com/tporadowski/redis/releases) and to `cmd` type `redis-server` to run the redis.
 
 **To install required libraries:**
 ```
