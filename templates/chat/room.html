@@ -155,6 +155,28 @@
             }
 
         }
+
+
+        function readFile() {
+            if (this.files && this.files[0]) {
+                var FR = new FileReader();
+
+                FR.addEventListener("load", function (e) {
+                   chatSocket.send(JSON.stringify({
+                    'message': e.target.result,
+                    'command': "img",
+                    'username': username,
+                    'roomname':roomName,
+                }));
+
+                });
+                FR.readAsDataURL(this.files[0]);
+            }
+        }
+        document.getElementById("inp").addEventListener('change',readFile);
+
+
+
 </script>
 
 {% endblock %}

@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Change time of message for chatroom">
-      <change afterPath="$PROJECT_DIR$/chat/migrations/0003_message_related_chat.py" afterDir="false" />
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Creating a model of `chatrooms` and classifying messages for chat rooms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +148,10 @@
       <workItem from="1703323084689" duration="158000" />
       <workItem from="1703324979252" duration="1233000" />
       <workItem from="1703351718071" duration="4036000" />
-      <workItem from="1703359353679" duration="3622000" />
+      <workItem from="1703359353679" duration="3910000" />
+      <workItem from="1703443838564" duration="408000" />
+      <workItem from="1703523254606" duration="1189000" />
+      <workItem from="1703525864733" duration="668000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
@@ -300,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703326106581</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Creating a model of `chatrooms` and classifying messages for chat rooms">
+      <option name="closed" value="true" />
+      <created>1703363465769</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703363465769</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +328,7 @@
     <MESSAGE value="edit README.md" />
     <MESSAGE value="Change Authentication Configs for chat" />
     <MESSAGE value="Change time of message for chatroom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change time of message for chatroom" />
+    <MESSAGE value="Creating a model of `chatrooms` and classifying messages for chat rooms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating a model of `chatrooms` and classifying messages for chat rooms" />
   </component>
 </project>
