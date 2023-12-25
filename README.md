@@ -23,9 +23,6 @@ All messages are received in the form of json through the client, and the main p
 
 
 
-<hr>
-
-
 
 ## Performance
 

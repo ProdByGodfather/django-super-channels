@@ -162,19 +162,28 @@
             if (this.files && this.files[0]) {
                 var FR = new FileReader();
 
+                var currentdate = new Date();
+                var datetime = currentdate.getFullYear() + "-"
+                + (currentdate.getMonth()+1)  + "-"
+                + currentdate.getDate() + "  "
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + ":"
+                + currentdate.getSeconds();
+
                 FR.addEventListener("load", function (e) {
                    chatSocket.send(JSON.stringify({
-                    'message': e.target.result,
+                    'content': e.target.result,
                     'command': "img",
-                    'username': username,
+                    '__str__': username,
                     'roomname':roomName,
+                    'timestamp': datetime
                 }));
 
                 });
                 FR.readAsDataURL(this.files[0]);
             }
         }
-
+    
         document.getElementById("inp").addEventListener('change',readFile);
 
 

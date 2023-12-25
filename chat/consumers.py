@@ -43,7 +43,7 @@ class ChatConsumer(WebsocketConsumer):
 
 
     def image(self,data):
-        print(data)
+        self.send_to_chat_message(data)
 
 
     def message_serializer(self, qs):
@@ -86,18 +86,27 @@ class ChatConsumer(WebsocketConsumer):
             we get command from client
             if command was "new_message" run funtion new_message
             if command was "fetch_message" run function fetch_message 
+            if command was "img" run function image
         '''
         self.commands[command](self,text_data_json)
 
     def send_to_chat_message(self, message):
         # Send message to room group
+
+        command = message.get('command',None)
+        timestamp = message.get('timestamp',None)
+
+
         async_to_sync(self.channel_layer.group_send)(self.room_group_name,
             {
                 '__str__':message['__str__'],
-                'timestamp':message['timestamp'],
+                'timestamp': timestamp,
                 "type": "chat.message",
                 "content": message['content'],
-                'command':"new_message"
+                '''
+                    from command we nows what if cmmand has img or command has new_message(text)
+                '''
+                'command' : (lambda command : 'img' if (command == 'img') else "new_message")(command),
             })
 
     # Receive message from room group
