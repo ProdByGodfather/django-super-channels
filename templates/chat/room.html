@@ -44,7 +44,7 @@
         <input id="chat-message-input" class="type-area" placeholder="Type something...">
         <!-- attachment btn -->
         <div class="attach-btn">
-          <span class="glyphicon glyphicon-paperclip file-btn"></span>
+          <span class="glyphicon glyphicon-paperclip file-btn" aria-hidden="true" onclick="document.getElementById('inp').click();"></span>
         </div>
         <!-- send btn -->
         <button id="chat-message-submit"><span class="glyphicon glyphicon-send send-btn"></span></button>
@@ -55,7 +55,8 @@
         {% endif %}
 
 
-
+<input id="inp" type='file' accept="image/*" style="display:none" >
+<p id="b64"></p>
     {{ room_name|json_script:"room-name" }}
     <script src="{% static 'js/reconnecting-websocket.js' %}"></script>
     <script>
@@ -173,6 +174,7 @@
                 FR.readAsDataURL(this.files[0]);
             }
         }
+
         document.getElementById("inp").addEventListener('change',readFile);
 
 

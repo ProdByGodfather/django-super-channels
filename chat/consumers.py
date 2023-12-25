@@ -41,6 +41,11 @@ class ChatConsumer(WebsocketConsumer):
         '''
         self.chat_message(content)
 
+
+    def image(self,data):
+        print(data)
+
+
     def message_serializer(self, qs):
         serialized = MessageSerializer(qs,many=(lambda qs: True if (qs.__class__.__name__ == 'QuerySet') else False)(qs))
         content = JSONRenderer().render(serialized.data)
@@ -60,7 +65,8 @@ class ChatConsumer(WebsocketConsumer):
 
     commands = {
         "new_message": new_message,
-        "fetch_message": fetch_message
+        "fetch_message": fetch_message,
+        "img": image,
     }
 
 
