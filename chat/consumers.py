@@ -43,8 +43,8 @@ class ChatConsumer(WebsocketConsumer):
 
 
     def image(self,data):
-        self.send_to_chat_message(data)
-
+        # self.send_to_chat_message(data)
+        self.new_message(data)
 
     def message_serializer(self, qs):
         serialized = MessageSerializer(qs,many=(lambda qs: True if (qs.__class__.__name__ == 'QuerySet') else False)(qs))

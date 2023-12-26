@@ -193,8 +193,10 @@
                 FR.addEventListener("load", function (e) {
                    chatSocket.send(JSON.stringify({
                     'content': e.target.result,
+                    'message':e.target.result,
                     'command': "img",
                     '__str__': username,
+                       'username':username,
                     'roomname':roomName,
                     'timestamp': datetime
                 }));
