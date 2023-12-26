@@ -118,6 +118,8 @@
         };
         function create_message(data){
             var author = data["__str__"]
+            const x = data.content.substring(0,11);
+
             if(author != username){
                 var div1 = document.createElement('div');
                 div1.id = 'friends-chat';
@@ -131,24 +133,42 @@
                 var p0 = div_chat.appendChild(document.createElement('p'))
                 p0.className = 'friends-chat-name';
                 p0.textContent = data.__str__;
-                var p1 = div_chat.appendChild(document.createElement('p'))
-                p1.className = 'friends-chat-balloon';
-                p1.textContent = data.content;
+
+                if (x == 'data:image/') {
+                    var p1 = div_chat.appendChild(document.createElement('img'))
+                    p1.className = 'friends-chat-balloon-img';
+                    p1.style = 'width:30%;';
+                    p1.src = data.content;
+                }
+                else{
+                    var p1 = div_chat.appendChild(document.createElement('p'))
+                    p1.className = 'friends-chat-balloon';
+                    p1.textContent = data.content;
+                }
                 var h5 = div_chat.appendChild(document.createElement("h5"))
                 h5.className = 'chat-datetime';
                 let str = data.timestamp.toString();
                 str = str.substring(0, str.length - 8);
                 h5.textContent = str;
                 document.querySelector("#chat-area").appendChild(div1)
-            } else{
+            } 
+            else{
                 var div_me = document.createElement('div');
                 div_me.className = 'your-chat';
                 div_me.id = 'your-chat';
-                var pme = div_me.appendChild(document.createElement('p'));
-                pme.className = 'your-chat-balloon';
+                if (x == 'data:image/') {
+                    var pme = div_me.appendChild(document.createElement('img'));
+                    pme.className = 'your-chat-balloon-img';
+                    pme.style = 'width:30%;';
+                    pme.src = data.content;
+                }
+                else{
+                    var pme = div_me.appendChild(document.createElement('p'));
+                    pme.className = 'your-chat-balloon';
+                    pme.textContent = data.content;
+                }
                 let strt = data.timestamp.toString();
                 strt = strt.substring(0, strt.length - 8);
-                pme.textContent = data.content;
                 var ptime = div_me.appendChild(document.createElement("h5"))
                 ptime.className = 'chat-datetime';
                 ptime.textContent = strt;

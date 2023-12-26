@@ -260,7 +260,17 @@ html, body {
     margin: 0px 0px 3px 0px;
     font-weight: bold;
 }
+.friends-chat-balloon-img{
 
+    max-width: 90%;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 0px 20px 20px 20px; /* TL-TR-BR-BL*/
+    font-family: 'iranSans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #485373;
+    background: white;
+    font-size: 0.9em;
+}
 
 .friends-chat-balloon{
     /* border: 3px solid navy; */
@@ -292,6 +302,17 @@ html, body {
     grid-auto-flow: row;
     grid-template-rows: min-content min-content;
     place-items: start end;
+}
+.your-chat-balloon-img{
+    /* border: 3px solid blueviolet; */
+    max-width: 80%;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 20px 20px 0px 20px; /* TL-TR-BR-BL*/
+    font-family: 'iranSans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: darkslateblue;
+    font-size: 0.9em;
 }
 
 .your-chat-balloon {
