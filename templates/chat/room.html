@@ -70,6 +70,48 @@
             + '/'
         );
 
+        const chatSocket2 = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/chat/'
+            + 'listener'
+            + '/'
+        );
+
+        chatSocket2.onmessage = function(e){
+            var data = JSON.parse(e.data)
+
+
+            for (let i = data['members_list'].length-1; i>=0;i--){
+                if (data['members_list'][i] == username){
+                    if (data['__str__'] != username){
+                        if (data['roomname'] != roomName){
+
+                            if(!("Notification" in window)){
+                                alert("This browser does not Support Desktop notification");
+                            }
+
+                            else if (Notification.permission === "granted"){
+                                var notification = new Notification(data['__str__'] + " : " + data['content'] + "\n" + "Room : " + roomName);
+                            }
+
+                            else if (Notification.permission !== "denied"){
+                                Notification.requestPermission().then(function (permission){
+                                    if(permission === "granted"){
+                                        var notification = new Notification("Hi there!")
+                                    }
+                                });
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        
         chatSocket.onopen = function (e){
              chatSocket.send(JSON.stringify({
                 'command': "fetch_message",
@@ -201,6 +243,10 @@
                     'timestamp': datetime
                 }));
 
+                   
+                   
+                   
+                   
                 });
                 FR.readAsDataURL(this.files[0]);
             }

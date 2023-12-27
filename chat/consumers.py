@@ -20,13 +20,35 @@ class ChatConsumer(WebsocketConsumer):
         message = data['message']
         author = data['username']
         roomname = data['roomname']
-
+        self.notif(data)
         chat_model = models.Chat.objects.get(roomname=roomname)
 
         user_model = user.objects.filter(username=author).first()
         message_model = Message.objects.create(author=user_model, content=message, related_chat=chat_model)
         result = eval(self.message_serializer(message_model))
         self.send_to_chat_message(result)
+
+
+    def notif(self, data):
+        message_room_name = data['roomname']
+        chat_room_qs = models.Chat.objects.filter(roomname=message_room_name)
+
+
+        members_list = []
+
+        for i in chat_room_qs[0].members.all():
+            members_list.append(i.username)
+
+        async_to_sync(self.channel_layer.group_send)(
+            'chat_listener',
+            {
+                '__str__': data['username'],
+                "type": "chat.message",
+                "content": data['message'],
+                'roomname': message_room_name,
+                'members_list': members_list,
+            })
+
 
     def fetch_message(self, data):
         roomname = data['roomname']
