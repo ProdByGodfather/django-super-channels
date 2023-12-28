@@ -41,13 +41,17 @@ CHANNEL_LAYERS = {
 # Application definition
 
 INSTALLED_APPS = [
+    # first import daphne
     'daphne',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # other imports
     'channels',
     'chat.apps.ChatConfig',
     'rest_framework',
@@ -77,6 +81,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # this context_processor
                 'chat.contextprocessor.return_username'
             ],
         },

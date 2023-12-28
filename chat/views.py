@@ -29,8 +29,13 @@ def room(request, room_name):
     else:
         chat_model[0].members.add(request.user)
 
+    members_list =  chat_model[0].members.all()
+
+    usernumber = len(members_list)
     context = {
         "room_name": room_name,
+        'chat_model': chat_model,
+        'members_list': members_list,
+        'usernumber':usernumber
     }
-
     return render(request, "chat/room.html", context)

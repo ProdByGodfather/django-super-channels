@@ -260,6 +260,9 @@ html, body {
     margin: 0px 0px 3px 0px;
     font-weight: bold;
 }
+.iransans {
+    font-family: 'iranSans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .friends-chat-balloon-img{
 
     max-width: 90%;

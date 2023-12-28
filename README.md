@@ -1,5 +1,5 @@
-# Django Channels
-Chat room web application based on `django_channels` and implemented with websockets protocol.
+# Django Super Channels
+Chat room web application based on `django_super_channels` and implemented with websockets protocol.
 
 [![Python](https://img.shields.io/badge/python-%2320232a.svg?style=for-the-badge&logo=python)](#django-channels)
 [![Django](https://img.shields.io/badge/django-%2320232a.svg?style=for-the-badge&logo=django)](#django-channels)
@@ -8,11 +8,11 @@ Chat room web application based on `django_channels` and implemented with websoc
 [![djangorestframework](https://img.shields.io/badge/Django_Rest_Framework-%2320232a.svg?style=for-the-badge&logo=fastapi)](#django-channels)
 [![js](https://img.shields.io/badge/java_script-%2320232a.svg?style=for-the-badge&logo=javascript)](#django-channels)
 
-Channels support Django's native asynchronous view and allow Django projects to handle not only HTTP, but also protocols that require long-running connections - `WebSockets`, `MQTT`, `chatbots`, `amateur radio`, `etc`.
-Now the django_channels architecture allows us to use websockets.
-Protocols that provide the possibility of sending requests from both the server and the client side.
-
-
+**Django Super Channels** is a chat room application based on django-channels.
+The design of this application is group chat.
+# Work process
+The design and operation process of super channels is such that the address of the chat room is received on the index page. (if the chat room is available, it will be entered, and if it is not available, the chat room will be created).
+After the person enters the room, you can communicate with the people who have entered the chat room.
 <center><img src="static/img/readme.png" width="100%"></center>
 
 According to the picture, when a message is sent from the `mahdi` user, the message is sent to the server through websocket.

@@ -20,9 +20,9 @@
 
         <!-- some btn -->
         <div class="some-btn">
-          <span class="glyphicon glyphicon-facetime-video"></span>
-          <span class="glyphicon glyphicon-earphone"></span>
-          <span class="glyphicon glyphicon-option-vertical option-btn"></span>
+{#          <span class="glyphicon glyphicon-facetime-video"></span>#}
+{#          <span class="glyphicon glyphicon-earphone"></span>#}
+{#            <a href="/"><span class="glyphicon glyphicon-home"></span></a>#}
         </div>
       </div>
 
@@ -32,15 +32,21 @@
     <center>
         <div class="div_marg">
              <h3>What chat room would you like to enter?</h3><br>
-    <input id="room-name-input" class="input_search_control" type="text" size="100"><br><br>
+    <div class="form-group container">
+        <input id="room-name-input" class=" form-control" type="text" size="100"><br><br>
+    </div>
             <button id="room-name-submit" class="btn_search_control"><span class="glyphicon glyphicon-search spanner"></span></button>
 
         </div>
         <br>
         <h1>Chat Rooms</h1>
+    <div class="container">
+        <div class="list-group">
         {% for i in chat_rooms %}
-            <a href="/chat/{{ i.roomname }}/" class="btn btn-info">{{ i.roomname }}</a>
+  <a href="/chat/{{ i.roomname }}/" class="list-group-item list-group-item-action">{{ i.roomname }}</a>
         {% endfor %}
+</div>
+    </div>
 
     </center>
 </div>
