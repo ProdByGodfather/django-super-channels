@@ -22,8 +22,9 @@
         </h4>
 
         <!-- some btn -->
-        <div class="some-btn">
-         <a href="{% url 'index' %}"><span class="glyphicon glyphicon-home"></span></a>
+        <div>
+            <a href="{% url 'index' %}" class="btn btn-danger"><span class="glyphicon glyphicon-home"></span></a>
+            <button data-toggle="modal" class="btn btn-info" data-target="#exampleModalCenter"><span class="glyphicon glyphicon-user"></span></button>
         </div>
       </div>
 
@@ -56,6 +57,33 @@
 <input id="inp" type='file' accept="image/*" style="display:none" >
 <p id="b64"></p>
     {{ room_name|json_script:"room-name" }}
+
+{# Modal Show Users Joined to Chat #}
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title iransans" id="exampleModalLongTitle">The number of users in the chat: {{ usernumber }}</h5>
+
+          </div>
+          <div class="modal-body">
+              <ol id="users-show" class="iransans">
+                  {% for i in members_list %}
+                  	    <li >{{ i.username }}</li>
+                  {% endfor %}
+
+              </ol>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <script src="{% static 'js/reconnecting-websocket.js' %}"></script>
     <script>
     const roomName = JSON.parse(document.getElementById('room-name').textContent);
@@ -109,7 +137,7 @@
         }
 
 
-        
+
         chatSocket.onopen = function (e){
              chatSocket.send(JSON.stringify({
                 'command': "fetch_message",
