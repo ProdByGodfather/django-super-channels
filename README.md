@@ -12,18 +12,27 @@ Channels support Django's native asynchronous view and allow Django projects to 
 Now the django_channels architecture allows us to use websockets.
 Protocols that provide the possibility of sending requests from both the server and the client side.
 
-<center><img src="static/images/websocket.webp" width="70%"></center>
+
+<center><img src="static/img/readme.png" width="100%"></center>
+
+According to the picture, when a message is sent from the `mahdi` user, the message is sent to the server through websocket.
+The server saves the message once in the database and sends the same message again to the mahdi user and other users without the need for a request.
+All messages are received in the form of json through the client, and the main part of designing and displaying the messages is the responsibility of the client.
 
 `django channels` is designed in the form of a messenger application whose client is javascript and its back-end has created a websocket-based connection with django.
 
-<hr>
+
+
 
 ## Performance
+
 > [!NOTE]
 > It is better to use the **virtualenvironment** when installing libraries and running the project. 
 
+
 > [!WARNING]
-> Have **redis** installed on the system before running
+> Have **redis** installed on the system before running. <br>
+> download and install [redis for windows](https://github.com/tporadowski/redis/releases) and to `cmd` type `redis-server` to run the redis.
 
 **To install required libraries:**
 ```

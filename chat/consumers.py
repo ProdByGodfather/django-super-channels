@@ -4,7 +4,10 @@ from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 from chat.serializers import MessageSerializer
 from rest_framework.renderers import JSONRenderer
+from django.contrib.auth import get_user_model
+from chat import models
 
+user = get_user_model()
 class ChatConsumer(WebsocketConsumer):
 
     def new_message(self, data):
@@ -14,21 +17,59 @@ class ChatConsumer(WebsocketConsumer):
             then create new message on db
             before create new message we send data from websocket to client again
         '''
-        print("New Message received")
+        message = data['message']
+        author = data['username']
+        roomname = data['roomname']
+        self.notif(data)
+        chat_model = models.Chat.objects.get(roomname=roomname)
+
+        user_model = user.objects.filter(username=author).first()
+        message_model = Message.objects.create(author=user_model, content=message, related_chat=chat_model)
+        result = eval(self.message_serializer(message_model))
+        self.send_to_chat_message(result)
+
+
+    def notif(self, data):
+        message_room_name = data['roomname']
+        chat_room_qs = models.Chat.objects.filter(roomname=message_room_name)
+
+
+        members_list = []
+
+        for i in chat_room_qs[0].members.all():
+            members_list.append(i.username)
+
+        async_to_sync(self.channel_layer.group_send)(
+            'chat_listener',
+            {
+                '__str__': data['username'],
+                "type": "chat.message",
+                "content": data['message'],
+                'roomname': message_room_name,
+                'members_list': members_list,
+            })
+
+
     def fetch_message(self, data):
-        qs = Message.last_messages(self)
+        roomname = data['roomname']
+        qs = Message.last_messages(self,roomname)
         message_json = self.message_serializer(qs)
         content = {
-            "message": eval(message_json)
+            "message": eval(message_json),
+            'command':"fetch_message",
         }
         '''
             we get datas from db and show to users
         '''
         self.chat_message(content)
 
-    def message_serializer(self, qs):
-        serialized = MessageSerializer(qs, many=True)
 
+    def image(self,data):
+        # self.send_to_chat_message(data)
+        self.new_message(data)
+
+    def message_serializer(self, qs):
+        serialized = MessageSerializer(qs,many=(lambda qs: True if (qs.__class__.__name__ == 'QuerySet') else False)(qs))
         content = JSONRenderer().render(serialized.data)
         return content
 
@@ -46,7 +87,8 @@ class ChatConsumer(WebsocketConsumer):
 
     commands = {
         "new_message": new_message,
-        "fetch_message": fetch_message
+        "fetch_message": fetch_message,
+        "img": image,
     }
 
 
@@ -59,24 +101,36 @@ class ChatConsumer(WebsocketConsumer):
     # Receive message from WebSocket
     def receive(self, text_data):
         text_data_json = json.loads(text_data)
-        message = text_data_json.get("message",None)
+
         command = text_data_json["command"]
 
         '''
             we get command from client
             if command was "new_message" run funtion new_message
             if command was "fetch_message" run function fetch_message 
+            if command was "img" run function image
         '''
-        self.commands[command](self,message)
+        self.commands[command](self,text_data_json)
 
     def send_to_chat_message(self, message):
         # Send message to room group
-        async_to_sync(self.channel_layer.group_send)(
-            self.room_group_name, {"type": "chat.message", "message": message}
-        )
+
+        command = message.get('command',None)
+        timestamp = message.get('timestamp',None)
+
+
+        async_to_sync(self.channel_layer.group_send)(self.room_group_name,
+            {
+                '__str__':message['__str__'],
+                'timestamp': timestamp,
+                "type": "chat.message",
+                "content": message['content'],
+                '''
+                    from command we nows what if cmmand has img or command has new_message(text)
+                '''
+                'command' : (lambda command : 'img' if (command == 'img') else "new_message")(command),
+            })
 
     # Receive message from room group
     def chat_message(self, event):
-        message = event["message"]
-        # Send message to WebSocket
-        self.send(text_data=json.dumps({"message": message}))
+        self.send(text_data=json.dumps(event))

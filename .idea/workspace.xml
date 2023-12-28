@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="edit README.md file">
+    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="save `base64` image to db and fetch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -28,12 +30,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ProdByGodfather"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ProdByGodfather&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -66,19 +68,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/Projects/django_channels/static/images",
+    "last_opened_file_path": "E:/Projects/django_channels/static",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\django_channels\static" />
       <recent name="E:\Projects\django_channels\static\images" />
       <recent name="E:\Projects\django_channels\static\js" />
     </key>
@@ -136,6 +139,28 @@
       <workItem from="1703014297877" duration="2466000" />
       <workItem from="1703017223941" duration="4542000" />
       <workItem from="1703052750937" duration="3153000" />
+      <workItem from="1703105691286" duration="64000" />
+      <workItem from="1703239680023" duration="1451000" />
+      <workItem from="1703244420852" duration="2819000" />
+      <workItem from="1703247972553" duration="1839000" />
+      <workItem from="1703254399022" duration="4121000" />
+      <workItem from="1703260318102" duration="686000" />
+      <workItem from="1703271204860" duration="4832000" />
+      <workItem from="1703323084689" duration="158000" />
+      <workItem from="1703324979252" duration="1233000" />
+      <workItem from="1703351718071" duration="4036000" />
+      <workItem from="1703359353679" duration="3910000" />
+      <workItem from="1703443838564" duration="408000" />
+      <workItem from="1703523254606" duration="1189000" />
+      <workItem from="1703525864733" duration="668000" />
+      <workItem from="1703528080901" duration="102000" />
+      <workItem from="1703533262934" duration="2733000" />
+      <workItem from="1703536358525" duration="369000" />
+      <workItem from="1703536852080" duration="2084000" />
+      <workItem from="1703607774325" duration="2401000" />
+      <workItem from="1703617832337" duration="1631000" />
+      <workItem from="1703748315332" duration="1022000" />
+      <workItem from="1703710394943" duration="1887000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
       <option name="closed" value="true" />
@@ -233,7 +258,111 @@
       <option name="project" value="LOCAL" />
       <updated>1703055391003</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="edit README.md file">
+      <option name="closed" value="true" />
+      <created>1703248318826</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703248318826</updated>
+    </task>
+    <task id="LOCAL-00014" summary="edit consumers for good performance">
+      <option name="closed" value="true" />
+      <created>1703249175655</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703249175655</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix bugs and errors">
+      <option name="closed" value="true" />
+      <created>1703260732353</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703260732353</updated>
+    </task>
+    <task id="LOCAL-00016" summary="edit README.md">
+      <option name="closed" value="true" />
+      <created>1703260784952</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703260784952</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Change Authentication Configs for chat">
+      <option name="closed" value="true" />
+      <created>1703325590695</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703325590695</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Change time of message for chatroom">
+      <option name="closed" value="true" />
+      <created>1703326106581</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703326106581</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Creating a model of `chatrooms` and classifying messages for chat rooms">
+      <option name="closed" value="true" />
+      <created>1703363465769</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703363465769</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Create action attach button for send image to `backend`">
+      <option name="closed" value="true" />
+      <created>1703534592365</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703534592365</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1703534806622</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703534806622</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1703534863827</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703534863827</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1703534986685</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703534986685</updated>
+    </task>
+    <task id="LOCAL-00024" summary="send data as `base64` to client">
+      <option name="closed" value="true" />
+      <created>1703537538452</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703537538452</updated>
+    </task>
+    <task id="LOCAL-00025" summary="save `base64` image to db and fetch">
+      <option name="closed" value="true" />
+      <created>1703618873785</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1703618873785</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +380,16 @@
     <MESSAGE value="write comments for readers" />
     <MESSAGE value="Create &amp; Config README.md file" />
     <MESSAGE value="edit README.md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit README.md file" />
+    <MESSAGE value="edit consumers for good performance" />
+    <MESSAGE value="fix bugs and errors" />
+    <MESSAGE value="edit README.md" />
+    <MESSAGE value="Change Authentication Configs for chat" />
+    <MESSAGE value="Change time of message for chatroom" />
+    <MESSAGE value="Creating a model of `chatrooms` and classifying messages for chat rooms" />
+    <MESSAGE value="Create action attach button for send image to `backend`" />
+    <MESSAGE value="update README.md" />
+    <MESSAGE value="send data as `base64` to client" />
+    <MESSAGE value="save `base64` image to db and fetch" />
+    <option name="LAST_COMMIT_MESSAGE" value="save `base64` image to db and fetch" />
   </component>
 </project>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'bootstrap3.3/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'chat.css' %}">
+</head>
+<body>
+  <div id="app" class="app">
+    <section id="main-right" class="main-right">
+
+        <!-- Content -->
+    
+        {% block content %}{% endblock %}
+
+    </section>
+</div>
+  <script src="{% static 'bootstrap3.3/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'bootstrap3.3/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

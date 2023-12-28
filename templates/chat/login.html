@@ -1,0 +1,58 @@
+{% extends 'chat/base.html' %}
+{% load static %}
+
+{% block title %}
+    room {{ room_name }}
+{% endblock %}
+
+{% block content %}
+<div id="header-right" class="header-right">
+        <!-- profile pict -->
+        <div id="header-img" class="profile header-img">
+          <img src="{% static 'images/Sample_User_Icon.png' %}" alt="">
+        </div>
+
+        <!-- name -->
+        <h4 class="name friend-name">
+            {% if user.is_authenticated %}
+        	{{ just_username }}
+            {% else %}
+            <span style="color: red">Ghost User</span>
+            {% endif %}
+        </h4>
+
+        <!-- some btn -->
+        <div class="some-btn">
+          <span class="glyphicon glyphicon-user"></span>
+        </div>
+      </div>
+
+      <!-- chat area -->
+      <div id="chat-area" class="chat-area">
+        <!-- chat content -->
+            <center><br><br><br>
+             <div class="container">
+             <div style="padding: 0px 10px">
+                   <form role="form" class="form-horizontal" method="post">
+                       {% csrf_token %}
+                     <div class="form-group">
+                     <h1>Login to your account</h1>
+                         {% for field in form %}
+                             <div class="input-group">
+                                 <span class="input-group-addon" style="background-color:#b77b48; color:white"><span>{{ field.html_name }}</span></span>
+                                 <input class="form-control" id="{{ field.id_for_label }}" maxlength="100" name="{{ field.html_name }}" type="text" />
+
+                             </div>
+                             {{ field.errors }}
+                         {% endfor %}
+                    <br>
+                    <input type="submit" class="btn btn-primary" value="login" />
+                     </div>
+                   </form>
+             </div>
+             </div>
+            </center>
+
+
+          </div>
+{% endblock %}
