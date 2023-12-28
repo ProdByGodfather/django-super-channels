@@ -1,4 +1,4 @@
-# Django Channels
+# Django Super Channels
 Chat room web application based on `django_super_channels` and implemented with websockets protocol.
 
 [![Python](https://img.shields.io/badge/python-%2320232a.svg?style=for-the-badge&logo=python)](#django-channels)
