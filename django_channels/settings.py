@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # other imports
     'channels',
     'chat.apps.ChatConfig',
+    'users.apps.UsersConfig',
     'rest_framework',
 ]
 
@@ -147,3 +148,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOGIN_URL = reverse_lazy('login')
+
+AUTH_USER_MODEL = "users.User"
