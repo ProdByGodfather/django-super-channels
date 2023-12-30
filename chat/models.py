@@ -25,5 +25,6 @@ class Message(models.Model):
 
     def last_messages(self, roomname):
         return Message.objects.filter(related_chat__roomname = roomname).order_by('-timestamp').all()
+
     def __str__(self):
         return self.author.username

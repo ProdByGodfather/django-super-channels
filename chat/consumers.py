@@ -54,9 +54,14 @@ class ChatConsumer(WebsocketConsumer):
         roomname = data['roomname']
         qs = Message.last_messages(self,roomname)
         message_json = self.message_serializer(qs)
+        # message = json.loads(message_json)
+
+        # user_image = user.objects.get(username = message[0]["__str__"])
+        
         content = {
             "message": eval(message_json),
             'command':"fetch_message",
+            # 'image':user_image.image.url
         }
         '''
             we get datas from db and show to users
@@ -117,7 +122,7 @@ class ChatConsumer(WebsocketConsumer):
 
         command = message.get('command',None)
         timestamp = message.get('timestamp',None)
-
+        user_image = user.objects.get(username = message['__str__'])
 
         async_to_sync(self.channel_layer.group_send)(self.room_group_name,
             {
@@ -125,6 +130,7 @@ class ChatConsumer(WebsocketConsumer):
                 'timestamp': timestamp,
                 "type": "chat.message",
                 "content": message['content'],
+                'image': user_image.image.url,
                 '''
                     from command we nows what if cmmand has img or command has new_message(text)
                 '''
