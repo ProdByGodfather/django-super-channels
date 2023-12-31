@@ -199,7 +199,7 @@
                     img.src = "{% static 'images/Sample_User_Icon.png' %}";
                 }
                 else{
-                    if(data.image.substring(0,8) == "/static/") {
+                    if(data.image.substring(0,8) == "/static/" || data.image.substring(0,8) == "/media/u") {
                         img.src = data.image;
                     }
                     else{
