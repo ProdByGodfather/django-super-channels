@@ -24,7 +24,12 @@ class ChatConsumer(WebsocketConsumer):
         chat_model = models.Chat.objects.get(roomname=roomname)
 
         user_model = user.objects.filter(username=author).first()
-        message_model = Message.objects.create(author=user_model, content=message, related_chat=chat_model)
+        try:
+            message_model = Message.objects.create(author=user_model, content=message, related_chat=chat_model,image=user_model.image.url)
+        except:
+            message_model = Message.objects.create(author=user_model, content=message, related_chat=chat_model,
+                                                   image="/static/images/Sample_User_Icon.png")
+
         result = eval(self.message_serializer(message_model))
         self.send_to_chat_message(result)
 
@@ -53,11 +58,22 @@ class ChatConsumer(WebsocketConsumer):
     def fetch_message(self, data):
         roomname = data['roomname']
         qs = Message.last_messages(self,roomname)
-        message_json = self.message_serializer(qs)
-        # message = json.loads(message_json)
 
-        # user_image = user.objects.get(username = message[0]["__str__"])
-        
+        for i in qs:
+            user_image = user.objects.get(username=i.__str__())
+            if user_image.image == "":
+                i.__dict__.update({"image": "/static/images/Sample_User_Icon.png"})
+            else:
+                i.__dict__.update({"image": user_image.image})
+
+        print(qs)
+        message_json = self.message_serializer(qs)
+
+        # message = json.loads(message_json)
+        # print(message)
+
+
+        # message_json += {'image':user_image}
         content = {
             "message": eval(message_json),
             'command':"fetch_message",
@@ -124,18 +140,33 @@ class ChatConsumer(WebsocketConsumer):
         timestamp = message.get('timestamp',None)
         user_image = user.objects.get(username = message['__str__'])
 
-        async_to_sync(self.channel_layer.group_send)(self.room_group_name,
-            {
-                '__str__':message['__str__'],
-                'timestamp': timestamp,
-                "type": "chat.message",
-                "content": message['content'],
-                'image': user_image.image.url,
-                '''
-                    from command we nows what if cmmand has img or command has new_message(text)
-                '''
-                'command' : (lambda command : 'img' if (command == 'img') else "new_message")(command),
-            })
+        try:
+            async_to_sync(self.channel_layer.group_send)(self.room_group_name,
+                                                         {
+                                                             '__str__': message['__str__'],
+                                                             'timestamp': timestamp,
+                                                             "type": "chat.message",
+                                                             "content": message['content'],
+                                                             'image': user_image.image.url,
+                                                             '''
+                                                                 from command we nows what if cmmand has img or command has new_message(text)
+                                                             '''
+                                                             'command': (lambda command: 'img' if (
+                                                                         command == 'img') else "new_message")(command),
+                                                         })
+        except:
+            async_to_sync(self.channel_layer.group_send)(self.room_group_name,
+                                                         {
+                                                             '__str__': message['__str__'],
+                                                             'timestamp': timestamp,
+                                                             "type": "chat.message",
+                                                             "content": message['content'],
+                                                             '''
+                                                                 from command we nows what if cmmand has img or command has new_message(text)
+                                                             '''
+                                                             'command': (lambda command: 'img' if (
+                                                                         command == 'img') else "new_message")(command),
+                                                         })
 
     # Receive message from room group
     def chat_message(self, event):

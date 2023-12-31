@@ -22,6 +22,7 @@ class Message(models.Model):
     content = models.TextField()
     related_chat = models.ForeignKey(Chat, on_delete=models.CASCADE,blank=True,null=True)
     timestamp = models.DateTimeField(auto_now_add=True)
+    image = models.CharField(max_length=500, blank=True,null=True)
 
     def last_messages(self, roomname):
         return Message.objects.filter(related_chat__roomname = roomname).order_by('-timestamp').all()

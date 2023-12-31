@@ -195,7 +195,18 @@
                 var div2 = div1.appendChild(document.createElement('div'));
                 div2.className = 'profile friends-chat-photo';
                 var img = div2.appendChild(document.createElement('img'))
-                img.src = "{% static 'images/Sample_User_Icon.png' %}";
+                if(data.image == "" || data.image == null){
+                    img.src = "{% static 'images/Sample_User_Icon.png' %}";
+                }
+                else{
+                    if(data.image.substring(0,8) == "/static/") {
+                        img.src = data.image;
+                    }
+                    else{
+                        img.src = "/media/" + data.image;
+
+                    }
+                }
                 var div_chat = div1.appendChild(document.createElement('div'));
                 div_chat.className = 'friends-chat-content';
                 var p0 = div_chat.appendChild(document.createElement('p'))
