@@ -1,4 +1,4 @@
-﻿# Django Super Channels
+﻿# Django Super Channels | [FA](README-FA.md)
 Chat room web application based on `django_super_channels` and implemented with websockets protocol.
 
 [![Python](https://img.shields.io/badge/python-%2320232a.svg?style=for-the-badge&logo=python)](#django-channels)
@@ -44,8 +44,4 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-<hr>
 
-> Not yet evolved
-
-Comming Soon
