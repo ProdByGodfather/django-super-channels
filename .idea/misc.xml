@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="Python 3.12 (django_channels)" />
+    <option name="sdkName" value="Python 3.12 (django-super-channels)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (django_channels)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (django-super-channels)" project-jdk-type="Python SDK" />
 </project>

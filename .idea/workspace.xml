@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="Make Private User Model">
+    <list default="true" id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/django_channels.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_22_2023_3_49_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_22_2023_3_49_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,84 +24,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;ProdByGodfather&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="8e92bc4c-573b-4aa0-b397-eeb5add79b4d" />
-        <option name="url" value="https://github.com/ProdByGodfather/django-channels.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2ZjGfDOIets6sZVmqsSOC89AKJR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2aM4oVpl186zhYbpFZkhhDGC6FV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.django_channels.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Projects/django_channels/users/migrations&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django Server.Django-super-channels.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/Projects/django-super-channels",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projects\django_channels\users\migrations" />
-      <recent name="E:\Projects\django_channels\static" />
-      <recent name="E:\Projects\django_channels\static\images" />
-      <recent name="E:\Projects\django_channels\static\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projects\django_channels\static\images" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="django_channels" type="Python.DjangoServer" factoryName="Django server">
-      <module name="django_channels" />
+    <configuration name="Django-super-channels" type="Python.DjangoServer" factoryName="Django server">
+      <module name="django-super-channels" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -100,7 +68,7 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -125,348 +93,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5fbf2efd-6d3c-43d0-b5f0-91c2d8bc9d91" name="Changes" comment="" />
-      <created>1702928177530</created>
+      <changelist id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="" />
+      <created>1704115296981</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1702928177530</updated>
-      <workItem from="1702928177535" duration="2896000" />
-      <workItem from="1702978795371" duration="403000" />
-      <workItem from="1702981370501" duration="533000" />
-      <workItem from="1702981939954" duration="727000" />
-      <workItem from="1703008223115" duration="3502000" />
-      <workItem from="1703014297877" duration="2466000" />
-      <workItem from="1703017223941" duration="4542000" />
-      <workItem from="1703052750937" duration="3153000" />
-      <workItem from="1703105691286" duration="64000" />
-      <workItem from="1703239680023" duration="1451000" />
-      <workItem from="1703244420852" duration="2819000" />
-      <workItem from="1703247972553" duration="1839000" />
-      <workItem from="1703254399022" duration="4121000" />
-      <workItem from="1703260318102" duration="686000" />
-      <workItem from="1703271204860" duration="4832000" />
-      <workItem from="1703323084689" duration="158000" />
-      <workItem from="1703324979252" duration="1233000" />
-      <workItem from="1703351718071" duration="4036000" />
-      <workItem from="1703359353679" duration="3910000" />
-      <workItem from="1703443838564" duration="408000" />
-      <workItem from="1703523254606" duration="1189000" />
-      <workItem from="1703525864733" duration="668000" />
-      <workItem from="1703528080901" duration="102000" />
-      <workItem from="1703533262934" duration="2733000" />
-      <workItem from="1703536358525" duration="369000" />
-      <workItem from="1703536852080" duration="2084000" />
-      <workItem from="1703607774325" duration="2401000" />
-      <workItem from="1703617832337" duration="1631000" />
-      <workItem from="1703748315332" duration="1022000" />
-      <workItem from="1703710394943" duration="11955000" />
-      <workItem from="1703766098660" duration="627000" />
-      <workItem from="1703767292174" duration="1463000" />
-      <workItem from="1703773674491" duration="1388000" />
-      <workItem from="1703964842512" duration="157000" />
-      <workItem from="1703965379860" duration="1654000" />
-      <workItem from="1704002772825" duration="2893000" />
-      <workItem from="1704006288954" duration="171000" />
+      <updated>1704115296981</updated>
+      <workItem from="1704115300037" duration="725000" />
     </task>
-    <task id="LOCAL-00001" summary="Fix Errors and create websocket connection">
-      <option name="closed" value="true" />
-      <created>1702929091460</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1702929091461</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Fix Errors and create websocket connection">
-      <option name="closed" value="true" />
-      <created>1702929098611</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1702929098611</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Fix Errors and create websocket connection">
-      <option name="closed" value="true" />
-      <created>1702929404908</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1702929404908</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Create `requirements.txt`">
-      <option name="closed" value="true" />
-      <created>1702979075276</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1702979075276</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Config Redis on project">
-      <option name="closed" value="true" />
-      <created>1703009377930</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1703009377930</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Change Consumers for group chat">
-      <option name="closed" value="true" />
-      <created>1703010869537</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1703010869537</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Change `WebSocket` to `ReConnectingWebSocket` in js">
-      <option name="closed" value="true" />
-      <created>1703015130220</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1703015130220</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Optimizing `reconnecting-websocket.js` file">
-      <option name="closed" value="true" />
-      <created>1703015357671</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1703015357671</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fetch messages from `DB` and get from client">
-      <option name="closed" value="true" />
-      <created>1703021514049</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1703021514049</updated>
-    </task>
-    <task id="LOCAL-00010" summary="write comments for readers">
-      <option name="closed" value="true" />
-      <created>1703021889257</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1703021889257</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Create &amp; Config README.md file">
-      <option name="closed" value="true" />
-      <created>1703055045508</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1703055045508</updated>
-    </task>
-    <task id="LOCAL-00012" summary="edit README.md file">
-      <option name="closed" value="true" />
-      <created>1703055391003</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1703055391003</updated>
-    </task>
-    <task id="LOCAL-00013" summary="edit README.md file">
-      <option name="closed" value="true" />
-      <created>1703248318826</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1703248318826</updated>
-    </task>
-    <task id="LOCAL-00014" summary="edit consumers for good performance">
-      <option name="closed" value="true" />
-      <created>1703249175655</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1703249175655</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix bugs and errors">
-      <option name="closed" value="true" />
-      <created>1703260732353</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1703260732353</updated>
-    </task>
-    <task id="LOCAL-00016" summary="edit README.md">
-      <option name="closed" value="true" />
-      <created>1703260784952</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1703260784952</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Change Authentication Configs for chat">
-      <option name="closed" value="true" />
-      <created>1703325590695</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1703325590695</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Change time of message for chatroom">
-      <option name="closed" value="true" />
-      <created>1703326106581</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1703326106581</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Creating a model of `chatrooms` and classifying messages for chat rooms">
-      <option name="closed" value="true" />
-      <created>1703363465769</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1703363465769</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Create action attach button for send image to `backend`">
-      <option name="closed" value="true" />
-      <created>1703534592365</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1703534592365</updated>
-    </task>
-    <task id="LOCAL-00021" summary="update README.md">
-      <option name="closed" value="true" />
-      <created>1703534806622</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1703534806622</updated>
-    </task>
-    <task id="LOCAL-00022" summary="update README.md">
-      <option name="closed" value="true" />
-      <created>1703534863827</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1703534863827</updated>
-    </task>
-    <task id="LOCAL-00023" summary="update README.md">
-      <option name="closed" value="true" />
-      <created>1703534986685</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1703534986685</updated>
-    </task>
-    <task id="LOCAL-00024" summary="send data as `base64` to client">
-      <option name="closed" value="true" />
-      <created>1703537538452</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1703537538452</updated>
-    </task>
-    <task id="LOCAL-00025" summary="save `base64` image to db and fetch">
-      <option name="closed" value="true" />
-      <created>1703618873785</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1703618873785</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Make Notification For ChatRooms">
-      <option name="closed" value="true" />
-      <created>1703713062663</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1703713062663</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Cleaning the Client">
-      <option name="closed" value="true" />
-      <created>1703716865991</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1703716865991</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Show users in the chatroom">
-      <option name="closed" value="true" />
-      <created>1703722031062</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1703722031063</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Show users in the chatroom">
-      <option name="closed" value="true" />
-      <created>1703722112475</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1703722112475</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Make Private User Model">
-      <option name="closed" value="true" />
-      <created>1703768755961</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1703768755961</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Make Private User Model">
-      <option name="closed" value="true" />
-      <created>1703773954639</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1703773954639</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Make Private User Model">
-      <option name="closed" value="true" />
-      <created>1703773963602</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1703773963602</updated>
-    </task>
-    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fix Errors and create websocket connection" />
-    <MESSAGE value="Create `requirements.txt`" />
-    <MESSAGE value="Config Redis on project" />
-    <MESSAGE value="Change Consumers for group chat" />
-    <MESSAGE value="Change `WebSocket` to `ReConnectingWebSocket` in js" />
-    <MESSAGE value="Optimizing `reconnecting-websocket.js` file" />
-    <MESSAGE value="fetch messages from `DB` and get from client" />
-    <MESSAGE value="write comments for readers" />
-    <MESSAGE value="Create &amp; Config README.md file" />
-    <MESSAGE value="edit README.md file" />
-    <MESSAGE value="edit consumers for good performance" />
-    <MESSAGE value="fix bugs and errors" />
-    <MESSAGE value="edit README.md" />
-    <MESSAGE value="Change Authentication Configs for chat" />
-    <MESSAGE value="Change time of message for chatroom" />
-    <MESSAGE value="Creating a model of `chatrooms` and classifying messages for chat rooms" />
-    <MESSAGE value="Create action attach button for send image to `backend`" />
-    <MESSAGE value="update README.md" />
-    <MESSAGE value="send data as `base64` to client" />
-    <MESSAGE value="save `base64` image to db and fetch" />
-    <MESSAGE value="Make Notification For ChatRooms" />
-    <MESSAGE value="Cleaning the Client" />
-    <MESSAGE value="Show users in the chatroom" />
-    <MESSAGE value="Make Private User Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Private User Model" />
   </component>
 </project>

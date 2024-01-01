@@ -66,7 +66,7 @@ class ChatConsumer(WebsocketConsumer):
             else:
                 i.__dict__.update({"image": user_image.image})
 
-        print(qs)
+
         message_json = self.message_serializer(qs)
 
         # message = json.loads(message_json)
