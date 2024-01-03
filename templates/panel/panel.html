@@ -1,0 +1,134 @@
+{% extends 'panel/base.html' %}
+
+{% block title %}
+	Profile
+{% endblock %}
+
+{% block content %}
+
+                    <div class="row">
+                        <div class="col-md-12 page-header">
+                            <div class="page-pretitle">Overview</div>
+                            <h2 class="page-title">Dashboard</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="blue large-icon mb-2 fas fa-envelope"></i>
+                                            <h4 class="mb-0">{{ message_number }}</h4>
+                                            <p class="text-muted">SEND MESSAGES</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="orange large-icon mb-2 fas fa-book"></i>
+                                            <h4 class="mb-0">{{ chat_rooms_number }}</h4>
+                                            <p class="text-muted">CHAT ROOMS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="grey large-icon mb-2 fas fa-door-open"></i>
+                                            <h4 class="mb-0">{{ last_login|date:"SHORT_DATE_FORMAT" }}</h4>
+                                            <p class="text-muted">LAST LOGIN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="olive large-icon mb-2 fas fa-calendar-check"></i>
+                                            <h4 class="mb-0">{{ date_joined|date:"SHORT_DATE_FORMAT" }}</h4>
+                                            <p class="text-muted">DATE JOINED</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Choice Room</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Create or Connect to your chat room.</h5>
+
+                                        <div class="mb-3">
+                                            <label for="roomname" class="form-label">Room Name</label>
+                                            <input type="text" id="room-name-input" name="roomname" placeholder="Enter Your Room Name" class="form-control" required="">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="submit" id="room-name-submit" class="btn btn-primary">
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="head">
+                                        <h5 class="mb-0">Chat Rooms</h5>
+                                        <p class="text-muted">All of Chat Rooms</p>
+                                    </div>
+                                    <div class="canvas-wrapper">
+                                        <table class="table table-striped">
+                                            <thead class="success">
+                                                <tr>
+                                                    <th>Chat Room Name</th>
+                                                    <th class="text-end">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in chat_rooms  %}
+                                                	<tr>
+                                                    <td>{{ i.roomname }} </td>
+                                                    <td class="text-end"><a href="/chat/{{ i.roomname }}" class="btn btn-outline-primary">Show</a> <a href="/chat/{{ i.roomname }}/delete" class="btn btn-outline-danger">delete</a></td>
+                                                </tr>
+                                                {% endfor %}
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+     <script>
+                                        document.querySelector('#room-name-input').focus();
+        document.querySelector('#room-name-input').onkeyup = function(e) {
+            if (e.key === 'Enter') {  // enter, return
+                document.querySelector('#room-name-submit').click();
+            }
+        };
+
+        document.querySelector('#room-name-submit').onclick = function(e) {
+            var roomName = document.querySelector('#room-name-input').value;
+            window.location.pathname = '/chat/' + roomName + '/';
+        };
+                                    </script>
+{% endblock %}
