@@ -21,7 +21,15 @@ All messages are received in the form of json through the client, and the main p
 
 `django channels` is designed in the form of a messenger application whose client is javascript and its back-end has created a websocket-based connection with django.
 
+<center><img src="static/img/dashboard.png" width="100%"></center>
 
+In addition to the Super Chat section, the dashboard section is intended for users, which makes the sections and settings of the user's account accessible. Basically, it shows the number of user messages, the number of chat rooms in which the user is present, along with the deletion and display section of the chat room, the last login to the account and the date of registration.
+Other sections of this dashboard include the following sections:
+1. Changing the password.
+2. User account settings and user profile editing.
+3. Logging out of the user account.
+
+In fact, the main part is the user dashboard, which can be accessed only by logging into the user account.
 
 
 ## Performance
