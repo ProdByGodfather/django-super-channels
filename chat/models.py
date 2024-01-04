@@ -6,6 +6,11 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 # Create Model Chat
+'''
+    chat models have a room name for get message from were room
+    members can only be viewed once
+    create time for show to user when message is send
+'''
 class Chat(models.Model):
     roomname = models.CharField(max_length=75,blank=True)
     members = models.ManyToManyField(User, null=True,blank=True)

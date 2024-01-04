@@ -12,6 +12,15 @@ from users.models import User
 
 
 # dashboard or user panel (Login Required)
+
+'''
+    we send to panel page this datas:
+    message numbers
+    chat room numbers
+    last login
+    date joined
+    chat rooms
+'''
 @login_required()
 def panel(request):
     # get number of user messages
@@ -34,10 +43,21 @@ def panel(request):
     return render(request,'panel/panel.html',context)
 
 
+'''
+    logout user and redirect to panel page ( becouse panel is login required basicly user redirect to login page )
+'''
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse_lazy('panel'))
 
+
+'''
+    thia class based view get the form from `forms.py` file and fields
+    
+    now user can see inputs
+    if form is valid then is posted to this page we create new user and login the user
+
+'''
 class RegisterView(View):
     form_class = RegisterForm
     initial = {'key': 'value'}

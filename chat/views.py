@@ -7,6 +7,14 @@ from django.urls import reverse_lazy
 
 from chat import models
 
+'''
+    login required
+    
+    this function send user to index chat page
+    this page shows to user chat rooms and a input for create chat rooms
+    
+    basicly this page expired
+'''
 @login_required()
 def index(request):
     # get user
@@ -22,6 +30,10 @@ def index(request):
     return render(request, "chat/index.html",context)
 
 
+
+'''
+    index chat room page
+'''
 @login_required()
 def room(request, room_name):
     chat_model = models.Chat.objects.filter(roomname=room_name)
@@ -43,6 +55,13 @@ def room(request, room_name):
     }
     return render(request, "chat/room.html", context)
 
+
+
+'''
+    this is new function
+    users can delete chat room for her selves
+    just chat room never show on user panel
+'''
 def del_room(request, room_name):
     user = request.user
     cat = models.Chat.objects.get(roomname=room_name)

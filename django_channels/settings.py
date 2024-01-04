@@ -154,5 +154,10 @@ LOGIN_URL = reverse_lazy('login')
 AUTH_USER_MODEL = "users.User"
 
 
+'''
+    media settings for work with images
+    we just use this settings for user images
+'''
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
