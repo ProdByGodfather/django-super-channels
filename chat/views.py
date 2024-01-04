@@ -1,7 +1,10 @@
 from enum import member
 
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse_lazy
+
 from chat import models
 
 @login_required()
@@ -39,3 +42,10 @@ def room(request, room_name):
         'usernumber':usernumber
     }
     return render(request, "chat/room.html", context)
+
+def del_room(request, room_name):
+    user = request.user
+    cat = models.Chat.objects.get(roomname=room_name)
+    cat.members.remove(user)
+    return HttpResponseRedirect(reverse_lazy('panel'))
+

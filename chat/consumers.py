@@ -7,6 +7,8 @@ from rest_framework.renderers import JSONRenderer
 from django.contrib.auth import get_user_model
 from chat import models
 
+
+# get user model
 user = get_user_model()
 class ChatConsumer(WebsocketConsumer):
 

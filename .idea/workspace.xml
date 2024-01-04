@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="`v1.1.2` - fix some bugs">
-      <change afterPath="$PROJECT_DIR$/README-FA.md" afterDir="false" />
+    <list default="true" id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="`v2.0.0` - Create User Panel">
+      <change afterPath="$PROJECT_DIR$/templates/panel/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,9 +32,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2aM4oVpl186zhYbpFZkhhDGC6FV" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -33,13 +45,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Django Server.Django-super-channels.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/Projects/django-super-channels",
+    "last_opened_file_path": "E:/Projects/django-super-channels/static/assets/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +62,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\django-super-channels\static\assets\img" />
+      <recent name="E:\Projects\django-super-channels\static" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Django-super-channels" type="Python.DjangoServer" factoryName="Django server">
       <module name="django-super-channels" />
@@ -91,7 +110,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704115296981</updated>
-      <workItem from="1704115300037" duration="1915000" />
+      <workItem from="1704115300037" duration="2273000" />
+      <workItem from="1704311244476" duration="6875000" />
+      <workItem from="1704396860327" duration="1682000" />
     </task>
     <task id="LOCAL-00001" summary="`v1.1.2` - fix some bugs">
       <option name="closed" value="true" />
@@ -101,7 +122,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704116168976</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Make `persian` README file">
+      <option name="closed" value="true" />
+      <created>1704117421361</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704117421361</updated>
+    </task>
+    <task id="LOCAL-00003" summary="`v2.0.0` - Create User Panel">
+      <option name="closed" value="true" />
+      <created>1704318514827</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704318514828</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +146,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="`v1.1.2` - fix some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="`v1.1.2` - fix some bugs" />
+    <MESSAGE value="Make `persian` README file" />
+    <MESSAGE value="`v2.0.0` - Create User Panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="`v2.0.0` - Create User Panel" />
   </component>
 </project>

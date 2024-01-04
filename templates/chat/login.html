@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    room {{ room_name }}
+    Login
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
             {% if user.is_authenticated %}
         	{{ just_username }}
             {% else %}
-            <span style="color: red">Ghost User</span>
+            <span style="color: red">Login Form</span>
             {% endif %}
         </h4>
 
@@ -36,9 +36,9 @@
                    <form role="form" class="form-horizontal" method="post">
                        {% csrf_token %}
                      <div class="form-group">
-                     <h1>Login to your account</h1>
+                     <h1>Login to your account</h1><br>
                          {% for field in form %}
-                             <div class="input-group">
+                             <div class="input-group ">
                                  <span class="input-group-addon" style="background-color:#b77b48; color:white"><span>{{ field.html_name }}</span></span>
                                  <input class="form-control" id="{{ field.id_for_label }}" maxlength="100" name="{{ field.html_name }}" type="text" />
 
@@ -46,7 +46,8 @@
                              {{ field.errors }}
                          {% endfor %}
                     <br>
-                    <input type="submit" class="btn btn-primary" value="login" />
+                         <a href="{% url 'register' %}">you don not have an account? go to register</a><br><br>
+                    <input type="submit" class="btn btn-success" value="login" />
                      </div>
                    </form>
              </div>

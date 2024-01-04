@@ -1,0 +1,48 @@
+{% extends 'chat/base.html' %}
+{% load static %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <div id="header-right" class="header-right">
+        <!-- profile pict -->
+        <div id="header-img" class="profile header-img">
+          {% if user.image == "" %}<img src="{% static 'images/Sample_User_Icon.png' %}" alt="">{% else %}<img src="{{ user.image.url }}" >{% endif %}
+        </div>
+
+        <!-- name -->
+        <h4 class="name friend-name">{% if user.is_authenticated %}
+        	{{ just_username }}
+            {% else %}
+            <span style="color: red">Register Form</span>
+            {% endif %}</h4>
+
+        <!-- some btn -->
+        <div class="some-btn">
+{#          <span class="glyphicon glyphicon-facetime-video"></span>#}
+{#          <span class="glyphicon glyphicon-earphone"></span>#}
+{#            <a href="/"><span class="glyphicon glyphicon-home"></span></a>#}
+        </div>
+      </div>
+
+      <!-- chat area -->
+      <div id="chat-area" class="chat-area">
+          <div class="content">
+              <div class="container">
+                {% if user.is_authenticated %}
+                    <center><h1>You Now Authenticated</h1>
+                	<p>you cant create new account. please <a href="{% url 'logout' %}">sign out</a></p></center>
+                    {% else %}
+                      <form action="." method="post">
+              {% csrf_token %}
+              {{ form }}
+                      <a href="{% url 'login' %}">you have an account? go to login</a><br><br>
+                      <button type="submit" class="btn btn-success">Register</button>
+          </form>
+                {% endif %}
+              </div>
+          </div>
+      </div>
+
+{% endblock %}
