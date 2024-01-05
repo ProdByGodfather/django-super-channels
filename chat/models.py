@@ -23,6 +23,12 @@ class Chat(models.Model):
 
 
 # Create Model Message
+'''
+    every message have one chat.
+    every message have one author.
+    every message have content ( this content maybe base64 image or text )
+    every message have an image ( this image save from author image )
+'''
 class Message(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()

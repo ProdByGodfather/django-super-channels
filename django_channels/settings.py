@@ -149,8 +149,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# Login page configs
 LOGIN_URL = reverse_lazy('login')
-
 AUTH_USER_MODEL = "users.User"
 
 

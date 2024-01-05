@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 
 from chat import models
 
+
 '''
     login required
     
@@ -15,24 +16,26 @@ from chat import models
     
     basicly this page expired
 '''
-@login_required()
-def index(request):
-    # get user
-    user = request.user
-    # get user chatrooms
-    chat_rooms = models.Chat.objects.filter(members = user)
-
-    context = {
-        'chat_rooms':chat_rooms,
-    }
-
-
-    return render(request, "chat/index.html",context)
+# @login_required()
+# def index(request):
+#     # get user
+#     user = request.user
+#     # get user chatrooms
+#     chat_rooms = models.Chat.objects.filter(members = user)
+#
+#     context = {
+#         'chat_rooms':chat_rooms,
+#     }
+#
+#                   NOTE : index.html deleted
+#     return render(request, "chat/index.html",context)
 
 
 
 '''
     index chat room page
+    
+    we send room-name chat-model members-list and usernumbers
 '''
 @login_required()
 def room(request, room_name):
