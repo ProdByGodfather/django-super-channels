@@ -149,10 +149,17 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# Login page configs
 LOGIN_URL = reverse_lazy('login')
-
+# If login successfully user redirect to panel
+LOGIN_REDIRECT_URL = reverse_lazy("panel")
 AUTH_USER_MODEL = "users.User"
 
+
+'''
+    media settings for work with images
+    we just use this settings for user images
+'''
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

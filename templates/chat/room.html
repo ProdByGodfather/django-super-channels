@@ -7,12 +7,10 @@
 
 {% block content %}
 <div id="header-right" class="header-right">
-        <!-- profile pict -->
         <div id="header-img" class="profile header-img">
             {% if user.image == "" %}<img src="{% static 'images/Sample_User_Icon.png' %}" alt="">{% else %}<img src="{{ user.image.url }}" >{% endif %}
         </div>
 
-        <!-- name -->
         <h4 class="name friend-name">
             {% if user.is_authenticated %}
         	{{ just_username }}
@@ -21,7 +19,6 @@
             {% endif %}
         </h4>
         <h4>Room: {{ room_name }}</h4>
-        <!-- some btn -->
         <div>
             <a href="{% url 'panel' %}" class="btn btn-danger"><span class="glyphicon glyphicon-home"></span></a>
             <button data-toggle="modal" class="btn btn-info" data-target="#exampleModalCenter"><span class="glyphicon glyphicon-user"></span></button>

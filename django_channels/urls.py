@@ -22,8 +22,10 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    # include chat ( chat room, index chat room page )
     path("chat/", include("chat.urls")),
     path('admin/', admin.site.urls),
+    # include users ( user panel, login page, register page )
     path('',include("users.urls"))
 ]
 

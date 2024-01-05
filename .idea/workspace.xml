@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="`v2.0.0` - Create User Panel">
-      <change afterPath="$PROJECT_DIR$/templates/panel/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="`v2.1.2` - Update Docs cleaning the codes.">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chat/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_channels/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_channels/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,27 +38,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.Django-super-channels.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/Projects/django-super-channels/static/assets/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.Django-super-channels.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/django-super-channels/static/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\django-super-channels\static\img" />
       <recent name="E:\Projects\django-super-channels\static\assets\img" />
       <recent name="E:\Projects\django-super-channels\static" />
     </key>
@@ -112,7 +108,10 @@
       <updated>1704115296981</updated>
       <workItem from="1704115300037" duration="2273000" />
       <workItem from="1704311244476" duration="6875000" />
-      <workItem from="1704396860327" duration="1682000" />
+      <workItem from="1704396860327" duration="3966000" />
+      <workItem from="1704439103722" duration="110000" />
+      <workItem from="1704439430679" duration="940000" />
+      <workItem from="1704479280544" duration="365000" />
     </task>
     <task id="LOCAL-00001" summary="`v1.1.2` - fix some bugs">
       <option name="closed" value="true" />
@@ -138,7 +137,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704318514828</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="`v2.1.0` - Create Register Form">
+      <option name="closed" value="true" />
+      <created>1704402506272</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704402506272</updated>
+    </task>
+    <task id="LOCAL-00005" summary="`v2.1.1` - Update Docs and user experience">
+      <option name="closed" value="true" />
+      <created>1704403611493</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704403611493</updated>
+    </task>
+    <task id="LOCAL-00006" summary="`v2.1.2` - Update Docs cleaning the codes.">
+      <option name="closed" value="true" />
+      <created>1704404638083</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704404638083</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +171,9 @@
     <MESSAGE value="`v1.1.2` - fix some bugs" />
     <MESSAGE value="Make `persian` README file" />
     <MESSAGE value="`v2.0.0` - Create User Panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="`v2.0.0` - Create User Panel" />
+    <MESSAGE value="`v2.1.0` - Create Register Form" />
+    <MESSAGE value="`v2.1.1` - Update Docs and user experience" />
+    <MESSAGE value="`v2.1.2` - Update Docs cleaning the codes." />
+    <option name="LAST_COMMIT_MESSAGE" value="`v2.1.2` - Update Docs cleaning the codes." />
   </component>
 </project>

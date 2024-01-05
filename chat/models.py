@@ -6,6 +6,11 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 # Create Model Chat
+'''
+    chat models have a room name for get message from were room
+    members can only be viewed once
+    create time for show to user when message is send
+'''
 class Chat(models.Model):
     roomname = models.CharField(max_length=75,blank=True)
     members = models.ManyToManyField(User, null=True,blank=True)
@@ -18,6 +23,12 @@ class Chat(models.Model):
 
 
 # Create Model Message
+'''
+    every message have one chat.
+    every message have one author.
+    every message have content ( this content maybe base64 image or text )
+    every message have an image ( this image save from author image )
+'''
 class Message(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
