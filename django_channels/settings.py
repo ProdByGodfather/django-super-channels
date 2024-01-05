@@ -151,6 +151,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Login page configs
 LOGIN_URL = reverse_lazy('login')
+# If login successfully user redirect to panel
+LOGIN_REDIRECT_URL = reverse_lazy("panel")
 AUTH_USER_MODEL = "users.User"
 
 
