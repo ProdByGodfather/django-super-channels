@@ -1,6 +1,6 @@
 from django import forms
 from users.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm,UserChangeForm
 
 class RegisterForm(UserCreationForm):
     # fields we want to include and customize in our form
@@ -41,5 +41,42 @@ class RegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2']
+
+
+
+class ProfileForm(UserChangeForm):
+    # fields we want to include and customize in our form
+    first_name = forms.CharField(max_length=100,
+                                 required=True,
+                                 widget=forms.TextInput(attrs={'placeholder': 'First Name',
+                                                               'class': 'form-control col-md-6',
+                                                               }))
+    last_name = forms.CharField(max_length=100,
+                                required=True,
+                                widget=forms.TextInput(attrs={'placeholder': 'Last Name',
+                                                              'class': 'form-control col-md-6',
+                                                              }))
+    username = forms.CharField(max_length=100,
+                               required=True,
+                               widget=forms.TextInput(attrs={'placeholder': 'Username',
+                                                             'class': 'form-control col-md-6',
+                                                             }))
+    email = forms.EmailField(required=False,
+                             widget=forms.EmailInput(attrs={'placeholder': 'Email',
+                                                           'class': 'form-control col-md-6',
+                                                           }))
+
+    bio = forms.CharField(max_length=255,
+                                required=False,
+                                widget=forms.Textarea(attrs={'placeholder': 'bio',
+                                                                  'class': 'form-control',
+                                                                  'data-toggle': 'bio',
+                                                                  'id': 'bio',
+                                                                  }))
+    password = None
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'username', 'email', 'image', 'bio']
 
 
