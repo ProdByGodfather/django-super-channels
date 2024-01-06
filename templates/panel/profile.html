@@ -1,0 +1,25 @@
+{% extends 'panel/base.html' %}
+{% load static %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+        <div class="card">
+            <div class="card-header">Profile</div>
+            <div class="card-body">
+                <h5 class="card-title">You Can See Or Edit Your Profile</h5>
+                <form accept-charset="utf-8">
+                    <div class="row g-2">
+                        {% csrf_token %}
+                        {{ form }}
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success">Edit Profile</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

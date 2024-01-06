@@ -5,7 +5,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import View
-
+from django.views.generic import UpdateView, DetailView
+from users.forms import ProfileForm
 from chat import models
 from users.forms import RegisterForm
 from users.models import User
@@ -79,3 +80,14 @@ class RegisterView(View):
             return redirect(to='/')
 
         return render(request, self.template_name, {'form': form})
+
+
+
+# Detail Profile
+class Profile(UpdateView,DetailView):
+    model = User
+    template_name = 'panel/profile.html'
+    form_class = ProfileForm
+    success_url = reverse_lazy("profile")
+    def get_object(self):
+        return User.objects.get(pk = self.request.user.pk)
