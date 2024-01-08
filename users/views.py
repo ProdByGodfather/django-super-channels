@@ -77,7 +77,9 @@ class RegisterView(View):
 
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}')
-
+            """
+                if user profile data is valid we send user to home page
+            """
             return redirect(to='/')
 
         return render(request, self.template_name, {'form': form})
