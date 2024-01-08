@@ -48,7 +48,10 @@ def room(request, room_name):
         chat_model[0].members.add(request.user)
 
     members_list =  chat_model[0].members.all()
-
+    """
+        we send datas to chat room for page
+        after this datas send to back end with user message and save to db.
+    """
     usernumber = len(members_list)
     context = {
         "room_name": room_name,
