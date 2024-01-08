@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
@@ -84,10 +85,28 @@ class RegisterView(View):
 
 
 # Detail Profile
-class Profile(UpdateView,DetailView):
+class Profile(LoginRequiredMixin,UpdateView,DetailView):
     model = User
     template_name = 'panel/profile.html'
     form_class = ProfileForm
     success_url = reverse_lazy("profile")
     def get_object(self):
         return User.objects.get(pk = self.request.user.pk)
+
+
+'''
+    get user profile page for detail of users in the chat room.
+    for do this work we must get another data from user for find him.
+    so we can get a username from urls and find user with this data. 
+'''
+def user_profile(request,username):
+    # get number of user messages
+    number_messages = models.Message.objects.filter(author=request.user).count()
+    # get number of user chat rooms
+    chatroom_number = models.Chat.objects.filter(members=request.user).count()
+    # get user last login
+    last_login = User.objects.get(username=request.user.username).last_login
+    user = User.objects.get(username=username)
+    return render(request, 'panel/user_profile.html', {'user': user,'message_number': number_messages,
+        'chat_rooms_number':chatroom_number,
+        'last_login':last_login,})

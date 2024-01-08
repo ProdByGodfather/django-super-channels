@@ -1,0 +1,66 @@
+{% load static %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'user_prof.css' %}">
+    <title>Profile</title>
+</head>
+<body>
+
+<br><br>
+<div class="profile-page">
+  <div class="content">
+    <div class="content__cover">
+      <div class="content__avatar"></div>
+
+    </div>
+    <div class="content__actions">
+      <br><br><br>
+        </div>
+    <div class="content__title">
+      <h1>{{ user.username }}</h1><span>{{ user.get_full_name }}</span>
+    </div>
+    <div class="content__description">
+
+      <p>{{ user.bio }}</p>
+    </div>
+    <ul class="content__list">
+      <li><span>{{ message_number }}</span>Message Numbers</li>
+      <li><span>{{ last_login|date:"SHORT_DATE_FORMAT" }}</span>Last Login/Register</li>
+      <li><span>{{ chat_rooms_number }}</span>Chatroom Numbers</li>
+    </ul>
+    <div class="content__button"></div>
+  </div>
+
+
+
+</div>
+</body>
+</html>
+
+<style>
+    body{
+        overflow: hidden;
+    }
+    .profile-page .content__avatar {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, 50%);
+  background: #8f6ed5 url({% if user.image == "" %}
+      {% static 'images/Sample_User_Icon.png' %}
+  	{% else %}
+      {{ user.image.url }}
+  {% endif %} ) center center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,0.07);
+}
+</style>
