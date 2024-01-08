@@ -192,6 +192,10 @@
                 var div2 = div1.appendChild(document.createElement('div'));
                 div2.className = 'profile friends-chat-photo';
                 var img = div2.appendChild(document.createElement('img'))
+                div2.onclick = function() {
+                window.open('/profile/'+data.__str__ , 'Show User Profile', "height=500, width=500, resizable=1, left=100, top=120, status=0, scrollbars=no, titlebar=no, toolbar=no");
+                }
+                {#img.onclick = window.open('/profile/'+data.__str__ , 'Show User Profile', "height=500, width=500, resizable=1, left=100, top=100, status=1, scrollbars=no");#}
                 if(data.image == "" || data.image == null){
                     img.src = "{% static 'images/Sample_User_Icon.png' %}";
                 }

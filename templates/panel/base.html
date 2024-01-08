@@ -16,7 +16,7 @@
     <div class="wrapper">
         <nav id="sidebar" class="active">
             <div class="sidebar-header">
-                <img src="{{ user.image.url }}" alt="Profile {{ user.username }}" width="40px" class="app-logo">
+                <img src="{% if user.image == '' %} {% static 'images/Sample_User_Icon.png' %} {% else %} {{ user.image.url }} {% endif %}" alt="Profile {{ user.username }}" width="40px" class="app-logo">
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>

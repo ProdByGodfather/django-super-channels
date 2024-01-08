@@ -13,6 +13,9 @@
                     <div class="row g-2">
                         {% csrf_token %}
                         {{ form }}
+                        {% if form.error %}
+                        	{{ form.error }}
+                        {% endif %} 
                     </div>
                     <br>
                     <button type="submit" class="btn btn-success">Edit Profile</button>

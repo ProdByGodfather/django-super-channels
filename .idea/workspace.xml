@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="`v2.1.3` - fix redirect url bugs.">
-      <change afterPath="$PROJECT_DIR$/templates/panel/profile.html" afterDir="false" />
+    <list default="true" id="75d6329d-a681-4243-9015-c19bce1ea42e" name="Changes" comment="`v2.2.0` - Make profile form for update user data">
+      <change afterPath="$PROJECT_DIR$/static/user_prof.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panel/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/panel/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panel/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/panel/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panel/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
@@ -119,6 +120,12 @@
       <workItem from="1704439430679" duration="940000" />
       <workItem from="1704479280544" duration="1569000" />
       <workItem from="1704489421984" duration="2427000" />
+      <workItem from="1704517976300" duration="993000" />
+      <workItem from="1704535707537" duration="1739000" />
+      <workItem from="1704561176638" duration="152000" />
+      <workItem from="1704649083281" duration="19000" />
+      <workItem from="1704695232283" duration="574000" />
+      <workItem from="1704710919734" duration="4432000" />
     </task>
     <task id="LOCAL-00001" summary="`v1.1.2` - fix some bugs">
       <option name="closed" value="true" />
@@ -176,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704480250935</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="`v2.2.0` - Make profile form for update user data">
+      <option name="closed" value="true" />
+      <created>1704518120633</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704518120633</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +205,7 @@
     <MESSAGE value="`v2.1.1` - Update Docs and user experience" />
     <MESSAGE value="`v2.1.2` - Update Docs cleaning the codes." />
     <MESSAGE value="`v2.1.3` - fix redirect url bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="`v2.1.3` - fix redirect url bugs." />
+    <MESSAGE value="`v2.2.0` - Make profile form for update user data" />
+    <option name="LAST_COMMIT_MESSAGE" value="`v2.2.0` - Make profile form for update user data" />
   </component>
 </project>
