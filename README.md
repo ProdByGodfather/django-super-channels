@@ -7,6 +7,8 @@ Chat room web application based on `django_super_channels` and implemented with 
 [![Sqlite](https://img.shields.io/badge/sqlite-%2320232a.svg?style=for-the-badge&logo=sqlite)](#django-channels)
 [![djangorestframework](https://img.shields.io/badge/Django_Rest_Framework-%2320232a.svg?style=for-the-badge&logo=fastapi)](#django-channels)
 [![js](https://img.shields.io/badge/java_script-%2320232a.svg?style=for-the-badge&logo=javascript)](#django-channels)
+[![html](https://img.shields.io/badge/html-%2320232a.svg?style=for-the-badge&logo=html5)](https://github.com//prodbygodfather)
+[![css](https://img.shields.io/badge/css-%2320232a.svg?style=for-the-badge&logo=css3)](https://github.com//prodbygodfather)
 
 **Django Super Channels** is a chat room application based on django-channels.
 The design of this application is group chat.
